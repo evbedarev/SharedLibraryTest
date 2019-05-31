@@ -5,11 +5,16 @@ class Deployer {
     int tries = 0
     Script script
 
+    Deployer(int tries) {
+        this.tries = tries;
+    }
+
     def run() {
-        while (tries < 10) {
-            Thread.sleep(1000)
+        for (int i = 0; i < tries; i++) {
+            Thread.sleep(5)
             tries++
             script.echo("tries is numeric: " + StringUtils.isAlphanumeric("" + tries))
+
         }
     }
 }
