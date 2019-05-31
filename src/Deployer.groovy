@@ -11,7 +11,6 @@ class Deployer {
         } else {
             this.tries = 0;
         }
-
         this.script = script;
     }
 
