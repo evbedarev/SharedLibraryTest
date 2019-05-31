@@ -6,7 +6,12 @@ class Deployer {
     Script script
 
     Deployer(Script script, def tries) {
-        this.tries = tries;
+        if (tries.isInteger()) {
+            this.tries = tries as int;
+        } else {
+            this.tries = 0;
+        }
+
         this.script = script;
     }
 
