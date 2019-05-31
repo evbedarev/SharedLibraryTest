@@ -16,9 +16,13 @@ class Deployer {
     }
 
     def run () {
+        File file = new File("loggroovy.txt");
+        def logtext;
         for (int i = 0; i < tries; i++) {
-            Thread.sleep(5)
-            script.echo("tries is numeric: " + StringUtils.isAlphanumeric("" + tries))
+            Thread.sleep(5);
+            logtext = "tries is numeric: " + StringUtils.isAlphanumeric("" + tries);
+            script.echo(logtext);
+            file.write(logtext);
         }
     }
 }
