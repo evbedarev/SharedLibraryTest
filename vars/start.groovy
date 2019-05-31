@@ -5,8 +5,8 @@ def call() {
 
     new Deployer(this, 25).run()
 
-    echo "Deployed"
-    currentBuild.result = 'SUCCESS ${env.JOB_NAME}-${env.BUILD_NUMBER}' //FAILURE to fail
+    echo "Deployed ${env.JOB_NAME}-${env.BUILD_NUMBER}"
+    currentBuild.result = 'SUCCESS' //FAILURE to fail
 
     return this
 }
