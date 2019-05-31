@@ -16,7 +16,7 @@ class Deployer {
     }
 
     def run () {
-        File file = new File("loggroovy.txt");
+        File file = new File("./loggroovy.txt");
         def logtext;
         for (int i = 0; i < tries; i++) {
             Thread.sleep(5);
