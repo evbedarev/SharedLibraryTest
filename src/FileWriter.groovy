@@ -2,6 +2,7 @@ import java.util.regex.Pattern
 
 class FileWriter {
     String fname, text;
+
     FileWriter(String fname, String text) {
         this.fname = fname;
         this.text = text;
