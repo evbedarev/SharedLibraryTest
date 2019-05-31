@@ -5,7 +5,7 @@ class Deployer {
     int tries = 0
     Script script
 
-    Deployer(Script script, String tries) {
+    Deployer(Script script, def tries) {
         this.tries = tries;
         this.script = script;
     }
