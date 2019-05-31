@@ -5,8 +5,9 @@ class Deployer {
     int tries = 0
     Script script
 
-    Deployer(int tries) {
+    Deployer(Script script, int tries) {
         this.tries = tries;
+        this.script = script;
     }
 
     def run() {
