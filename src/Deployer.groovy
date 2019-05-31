@@ -13,7 +13,7 @@ class Deployer {
     def run () {
         for (int i = 0; i < tries; i++) {
             Thread.sleep(5)
-            script.echo("tries is numeric: ${env.JOB_NAME}-${env.BUILD_NUMBER}" + StringUtils.isAlphanumeric("" + tries))
+            script.echo("tries is numeric: " + StringUtils.isAlphanumeric("" + tries))
         }
     }
 }
