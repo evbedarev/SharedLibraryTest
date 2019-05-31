@@ -1,9 +1,9 @@
 import java.util.regex.Pattern
 
-class FileWriter {
+class FWriter {
     String fname, text;
 
-    FileWriter(String fname, String text) {
+    FWriter(String fname, String text) {
         this.fname = fname;
         this.text = text;
     }
