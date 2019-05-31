@@ -22,6 +22,7 @@ class Deployer {
             logtext = this.toString() + "tries is numeric: " + StringUtils.isAlphanumeric("" + tries);
             script.echo(logtext);
             file.append(logtext);
+            print "environment is ${script.env.PAR1}"
         }
     }
 }
