@@ -10,7 +10,7 @@ class Deployer {
         this.script = script;
     }
 
-    def run() {
+    def run = { ->
         for (int i = 0; i < tries; i++) {
             Thread.sleep(5)
             tries++
