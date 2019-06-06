@@ -10,7 +10,7 @@ def call() {
     echo message
     currentBuild.result = 'SUCCESS' //FAILURE to fail
     node {
-        withCredentials([file(credentialsId: 'test', variable: 'FILE')]) {
+        withCredentials([file(credentialsId: 'testFile', variable: 'FILE')]) {
             sh 'use $FILE'
         }
     }
