@@ -11,7 +11,7 @@ def call() {
     currentBuild.result = 'SUCCESS' //FAILURE to fail
     node {
         withCredentials([file(credentialsId: 'testFile', variable: 'FILE')]) {
-            sh 'use $FILE'
+            sh 'cat $FILE'
         }
     }
     return this
