@@ -23,16 +23,7 @@ class Deployer {
             script.echo(logtext);
             file.append(logtext);
             script.echo("environment is ${script.env.PAR1}");
-        }
-
-        def creds = com.cloudbees.plugins.credentials.CredentialsProvider.lookupCredentials(
-                com.cloudbees.plugins.credentials.Credentials.class,
-                Jenkins.instance,
-                null,
-                null
-        );
-        for (c in creds) {
-            println(c.id + ": " + c.description)
+            script.echo(script.env.JOB_BASE_NAME)
         }
     }
 
