@@ -23,7 +23,7 @@ class Deployer {
             script.echo(logtext);
             file.append(logtext);
             script.echo("environment is ${script.env.PAR1}");
-            script.echo(script.env.JOB_BASE_NAME?.find('fxp-nexus'))
+            script.echo(script.env.WORKSPACE)
         }
     }
 
