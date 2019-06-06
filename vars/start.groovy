@@ -9,8 +9,10 @@ def call() {
     fileWriter.writeFile();
     echo message
     currentBuild.result = 'SUCCESS' //FAILURE to fail
-    withCredentials([file(credentialsId: 'test',variable: 'FILE')]) {
-        sh 'use $FILE'
+    node {
+        withCredentials([file(credentialsId: 'test', variable: 'FILE')]) {
+            sh 'use $FILE'
+        }
     }
     return this
 }
