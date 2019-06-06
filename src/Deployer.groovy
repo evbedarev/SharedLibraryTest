@@ -23,9 +23,6 @@ class Deployer {
             script.echo(logtext);
             file.append(logtext);
             script.echo("environment is ${script.env.PAR1}");
-            script.withCredentials([file(credentialsId: 'testFile', variable: 'FILE')]) {
-                sh 'cat $FILE'
-            }
         }
     }
 }

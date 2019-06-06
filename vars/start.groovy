@@ -13,6 +13,10 @@ def call() {
         fileWriter.writeFile();
         echo message
         currentBuild.result = 'SUCCESS' //FAILURE to fail
+        withCredentials([file(credentialsId: 'testFile', variable: 'FILE')]) {
+            sh 'cat $FILE'
+        }
     }
+
     return this
 }
