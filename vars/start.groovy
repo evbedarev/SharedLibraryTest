@@ -9,8 +9,8 @@ def call() {
     fileWriter.writeFile();
     echo message
     currentBuild.result = 'SUCCESS' //FAILURE to fail
-    withCredentials([usernamePassword(credentialsId: 'test', usernameVariable: 'nexus_usr_sigma', passwordVariable: 'nexus_pwd_sigma')]) {
-        println(${nexus_usr_sigma})
+    withCredentials([file(credentialsId: 'test',variable: 'FILE')]) {
+        sh 'cat $FILE'
     }
     return this
 }
