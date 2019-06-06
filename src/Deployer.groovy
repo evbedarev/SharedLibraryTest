@@ -24,5 +24,8 @@ class Deployer {
             file.append(logtext);
             script.echo("environment is ${script.env.PAR1}");
         }
+        script.withCredentials([usernamePassword(credentialsId: 'ark_nexus_sigma', usernameVariable: 'nexus_usr_sigma', passwordVariable: 'nexus_pwd_sigma')]) {
+            println(${nexus_usr_sigma})
+        }
     }
 }
