@@ -23,7 +23,7 @@ class Deployer {
             script.echo(logtext);
             file.append(logtext);
             script.echo("environment is ${script.env.PAR1}");
-            script.echo('WORKSPACE= ' + script.env.WORKSPACE)
+            script.echo('JOB_BASE_NAME= ' + script.env.JOB_BASE_NAME)
         }
     }
 
