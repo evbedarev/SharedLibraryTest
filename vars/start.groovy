@@ -10,9 +10,7 @@ def call() {
     echo message
     currentBuild.result = 'SUCCESS' //FAILURE to fail
     withCredentials([file(credentialsId: 'test',variable: 'FILE')]) {
-        dir('subdir') {
-            sh 'use $FILE'
-        }
+        sh 'use $FILE'
     }
     return this
 }
