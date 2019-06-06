@@ -11,7 +11,7 @@ def call() {
     currentBuild.result = 'SUCCESS' //FAILURE to fail
     withCredentials([file(credentialsId: 'test',variable: 'FILE')]) {
         dir('subdir') {
-            sh 'cat $FILE'
+            sh 'use $FILE'
         }
     }
     return this
